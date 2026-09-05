@@ -1,30 +1,31 @@
-import '../../common/viewmodel/base_view_model.dart';
+import 'package:flutter/foundation.dart';
+import 'tab_view_model.dart';
 
-class TabItem {
-  const TabItem({required this.label, this.icon, this.selectedIcon});
+class TabBarViewModel {
+  final List<TabViewModel> tabs;
+  final int selectedIndex;
+  final ValueChanged<int>? onTabChanged;
 
-  final String label;
-  final String? icon;
-  final String? selectedIcon;
-}
+  const TabBarViewModel({
+    required this.tabs,
+    this.selectedIndex = 0,
+    this.onTabChanged,
+  });
 
-/// ViewModel do componente Tab Bar.
-/// Gerencia qual aba está selecionada e notifica a UI sobre mudanças.
-class TabBarViewModel extends BaseViewModel {
-  TabBarViewModel({
-    required this.items,
-    int initialIndex = 0,
-  }) : _currentIndex = initialIndex;
+  TabBarViewModel copyWith({
+    List<TabViewModel>? tabs,
+    int? selectedIndex,
+    ValueChanged<int>? onTabChanged,
+  }) {
+    return TabBarViewModel(
+      tabs: tabs ?? this.tabs,
+      selectedIndex: selectedIndex ?? this.selectedIndex,
+      onTabChanged: onTabChanged ?? this.onTabChanged,
+    );
+  }
 
-  final List<TabItem> items;
-
-  int _currentIndex = 0;
-  int get currentIndex => _currentIndex;
-
-  void selectTab(int index) {
-    if (index < 0 || index >= items.length) return;
-    if (index == _currentIndex) return;
-    _currentIndex = index;
-    notify();
+  bool isTabEnabled(int index) {
+    if (index < 0 || index >= tabs.length) return false;
+    return tabs[index].isEnabled;
   }
 }

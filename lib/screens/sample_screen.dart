@@ -39,41 +39,55 @@ class SampleScreen extends StatelessWidget {
       title: 'Tab Bar',
       subtitle: 'Barra de navegação inferior',
       icon: Icons.tab,
+      route: AppRoutes.sampleTabBar,
     ),
     _ComponentItem(
       title: 'List Items',
       subtitle: 'Itens de lista customizáveis',
       icon: Icons.list_alt,
+      route: AppRoutes.sampleListItems,
     ),
     _ComponentItem(
       title: 'Progress Bar',
       subtitle: 'Barra de progresso linear',
       icon: Icons.linear_scale,
+      route: AppRoutes.sampleProgressBar,
     ),
     _ComponentItem(
       title: 'Avatar',
       subtitle: 'Exibição de imagem/perfil',
       icon: Icons.account_circle,
+      route: AppRoutes.sampleAvatar,
     ),
     _ComponentItem(
       title: 'Badge',
       subtitle: 'Indicadores e notificações',
       icon: Icons.notifications,
+      route: AppRoutes.sampleBadge,
     ),
     _ComponentItem(
       title: 'Chip / Tag',
       subtitle: 'Etiquetas e filtros',
       icon: Icons.label,
+      route: AppRoutes.sampleChip,
     ),
     _ComponentItem(
       title: 'Card',
       subtitle: 'Containers com conteúdo',
       icon: Icons.dashboard,
+      route: AppRoutes.sampleCard,
     ),
     _ComponentItem(
       title: 'Snackbar',
       subtitle: 'Mensagens temporárias',
       icon: Icons.info_outline,
+      route: AppRoutes.sampleSnackBar,
+    ),
+    _ComponentItem(
+      title: 'Context Menu',
+      subtitle: 'Menu suspenso de ações',
+      icon: Icons.more_vert,
+      route: AppRoutes.sampleContextMenu,
     ),
   ];
 
