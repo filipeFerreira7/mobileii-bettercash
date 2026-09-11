@@ -461,5 +461,6 @@ cria
 # 👨‍💻 Projeto
 
 **Better Cash — Mobile II**
+**Idealizado e desenvolvido por: Filipe Ferreira**
 
 Projeto desenvolvido utilizando Flutter, seguindo arquitetura **MVVM + Factory** e um Design System baseado em Figma.
