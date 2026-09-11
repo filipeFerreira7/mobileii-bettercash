@@ -1,5 +1,5 @@
 # 💰 Better Cash — Mobile II
-
+**Creator/Programmer**
 Aplicação mobile para **gestão e controle financeiro pessoal**, desenvolvida em Flutter.
 
 O **Better Cash** permite que o usuário registre suas receitas e despesas ao longo do mês e utilize recursos de **Inteligência Artificial** para obter análises e sugestões que possam contribuir para a melhoria da sua vida financeira.
